@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance Tracker</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+ 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+   
+
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="tac">
+            <h3>Budget</h3>
+            <p class="hide error" id="b-e">
+              Value cannot be empty or negative
+            </p>
+            <input
+              type="number"
+              id="t-am"
+              placeholder="Enter Total Amount"
+            />
+            <button class="submit" id="t-am-b">Set Budget</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="uac">
+            <h3>Expenses</h3>
+            <p class="hide error" id="p-t-e">
+              Values cannot be empty
+            </p>
+            <input
+              type="text"
+              class="pt"
+              id="p-t"
+              placeholder="Enter Title of Product"
+            />
+            <input
+              type="number"
+              id="u-am"
+              placeholder="Enter Cost of Product"
+            />
+            <button class="submit" id="c-am">Check Amount</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="oc fs">
+          <div>
+            <p>Total Budget</p>
+            <span id="amnt">0</span>
+          </div>
+          <div>
+            <p>Expenses</p>
+            <span id="e-v">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="b-a">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="lst">
+        <h3>Expense List</h3>
+        <div class="list-container" id="lst"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="index.js"></script>
+  </body>
+</html>
